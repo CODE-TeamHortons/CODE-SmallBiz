@@ -1,0 +1,16 @@
+<h1>Listing Queries</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+	<th>Age</th>
+  </tr>
+ 
+  <% @querys.each do |query| %>
+    <tr>
+      <td><%= query.name %></td>
+      <td><%= query.rating %></td>
+	  <td><%= query.age %></td>
+    </tr>
+  <% end %>
+</table>
