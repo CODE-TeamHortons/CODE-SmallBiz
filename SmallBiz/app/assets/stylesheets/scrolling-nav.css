@@ -120,9 +120,10 @@ of those sections to manage the look and feel of the site. */
 
 .about-section {
     height: 100%;
-    padding-top: 50px;
-    text-align: center;
-    background: #fff;
+    padding-top: 0px;
+    text-align: left;
+    background: #6c6c6a;
+    margin-top: -30px;
 }
 
 .services-section {
