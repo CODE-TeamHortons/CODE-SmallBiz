@@ -5,12 +5,12 @@
     <th>Text</th>
 	<th>Age</th>
   </tr>
- 
+  
   <% @querys.each do |query| %>
-    <tr>
-      <td><%= query.name %></td>
-      <td><%= query.rating %></td>
-	  <td><%= query.age %></td>
-    </tr>
-  <% end %>
+  <tr>
+	<td><%= query %></td>
+  </tr>
+ <%end%>
+  
+
 </table>

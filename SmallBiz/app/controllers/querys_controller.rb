@@ -11,13 +11,27 @@ class QuerysController < ApplicationController
 	end
 
 	def create
-		
+		rankings = Hash.new
+		i = 1
 		#pull info of rank_g ie. rank greater than 6
 		# query the RecPlaces table 
-		ranking = params[:rank]
+		ord = params[:rank]
+		if ord == 'rank_g'
+			ord = 6
+		elsif
+			ord = 2
+		end
 		
 		#present a view 
-		@querys = RecPlace.all.where('rating > 6')
-		
+		t1 = RecPlace.all
+			t1.each do |query|
+			#some rating based off params
+			score = query.rating
+			rankings[i] = score
+			i = i + 1
+			end
+		rankings.sort_by {|key,value| value}
+		@querys = rankings.first(3)
+	
 	end
 end
