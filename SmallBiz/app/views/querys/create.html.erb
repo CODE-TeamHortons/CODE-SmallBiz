@@ -1,15 +1,19 @@
 <h1>Listing Queries</h1>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>Rating</th>
 	<th>Age</th>
   </tr>
   
   <% @querys.each do |query| %>
-  <tr>
-	<td><%= query %></td>
-  </tr>
+  <% key = query[0] %>
+  <% row = RecPlace.find(key+34)%>
+    <tr>
+      <td><%= row.name %></td>
+      <td><%= row.rating %></td>
+	  <td><%= row.age %></td>
+    </tr>
  <%end%>
   
 
