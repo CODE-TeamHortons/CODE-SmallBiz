@@ -18,6 +18,12 @@
   <%= radio_button_tag(:age, "adult") %>
   <%= label_tag(:age_adult, "I'm over 21") %>
  
+   <p>Ranking greater than 6? </p>
+<%= radio_button_tag(:rank, "rank_g") %>
+  <%= label_tag(:rank_g, "Yes, rank greater than 6") %>
+  <%= radio_button_tag(:rank, "rank_l") %>
+  <%= label_tag(:rank_l, "No, rank less than 6") %>
+ 
  
   <p>
     <%= f.submit %>
