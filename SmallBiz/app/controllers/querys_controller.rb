@@ -17,7 +17,7 @@ class QuerysController < ApplicationController
 		ranking = params[:rank]
 		
 		#present a view 
-		place = RecPlace.all
+		@querys = RecPlace.all.where('rating > 6')
 		
 	end
 end
