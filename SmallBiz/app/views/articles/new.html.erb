@@ -1,0 +1,20 @@
+<h1> New Search </h1>
+
+
+<%= form_for :query, url: querys_path do |f| %>
+  <p> How old are you? </p>
+<%= radio_button_tag(:age, "child") %>
+  <%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+  <%= label_tag(:age_adult, "I'm over 21") %>
+  
+<p>How much do you weigh? </p>
+<%= radio_button_tag(:weight, "overweight") %>
+  <%= label_tag(:weight_great150, "I am over 150") %>
+<%= radio_button_tag(:weight, "underweight") %>
+  <%= label_tag(:weight_less150, "I'm under 150") %> 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
