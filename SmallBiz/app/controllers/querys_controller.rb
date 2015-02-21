@@ -11,7 +11,7 @@ class QuerysController < ApplicationController
 	end
 
 	def create
-		rankings = Hash.new
+		rankings = Hash.new{|key,values| values}
 		i = 1
 		#pull info of rank_g ie. rank greater than 6
 		# query the RecPlaces table 
@@ -30,8 +30,8 @@ class QuerysController < ApplicationController
 			rankings[i] = score
 			i = i + 1
 			end
-		rankings.sort_by {|key,value| value}
-		@querys = rankings.first(3)
-	
+		#rankings.sort_by {|key,values| values}
+		#@querys = rankings.values.sort.reverse.first(7)
+		@querys = rankings.sort_by{|k,v| v}.reverse.first(7)
 	end
 end
