@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
+  get '/match', to: "match#index", :via => 'get'
+
+  get 'match/index'
+
+  get 'match/search'
+
+  get 'match/list'
+
+  get 'match/result'
+
   get 'landingpage/index'
+
+  get 'resources/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
