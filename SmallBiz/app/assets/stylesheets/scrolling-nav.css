@@ -107,19 +107,125 @@ html {
   font-style: italic;
 }
 
+/* Gotham PRO */
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Thin.otf') format('OpenType');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-XLight.otf') format('OpenType');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Light.otf') format('OpenType');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Book.otf') format('OpenType');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Medium.otf') format('OpenType');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Bold.otf') format('OpenType');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Black.otf') format('OpenType');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-Ultra.otf') format('OpenType');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-ThinIta.otf') format('OpenType');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-XLightIta.otf') format('OpenType');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-LightIta.otf') format('OpenType');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-BookIta.otf') format('OpenType');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-MediumIta.otf') format('OpenType');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-BoldIta.otf') format('OpenType');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-BlackIta.otf') format('OpenType');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamPro;
+  src: url('../assets/fonts/gothampro/Gotham-UltraIta.otf') format('OpenType');
+  font-weight: 800;
+  font-style: italic;
+}
+
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
 
 .intro-section {
     height: 300px;
-    padding-top: 20px;
+    padding-top: 40px;
     text-align: center;
     background: #fff;
 }
 
 .about-section {
-    height: 100%;
+    height: 500px;
     padding-top: 0px;
     text-align: left;
     background: #6c6c6a;
@@ -141,9 +247,9 @@ of those sections to manage the look and feel of the site. */
 }
 
 .header-shadow {
-    background-image: url('../assets/images/top_banner.png');
+    background-image: url('../assets/images/top_banner_new.gif');
     width:100%;
-    height:280px;
+    height:260px;
 }
 
 
@@ -151,4 +257,10 @@ of those sections to manage the look and feel of the site. */
     background-image: url('../assets/images/greypix.png');
     width:100%;
     height:41px;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #e15c5f;
+  border-color: #2e6da4;
 }

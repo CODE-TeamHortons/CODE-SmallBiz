@@ -2974,10 +2974,11 @@ select[multiple].form-group-lg .form-control {
   }
 }
 .btn {
+  background-color: #e15c5f;
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;
@@ -2993,6 +2994,7 @@ select[multiple].form-group-lg .form-control {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+
 }
 .btn:focus,
 .btn:active:focus,
@@ -3004,7 +3006,10 @@ select[multiple].form-group-lg .form-control {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn:hover,
+.btn:hover {
+  background-color: #FFFFFF;
+  border-color: #6c6c6a;
+}
 .btn:focus,
 .btn.focus {
   color: #333;
@@ -3012,6 +3017,7 @@ select[multiple].form-group-lg .form-control {
 }
 .btn:active,
 .btn.active {
+  color: #fff;
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
@@ -3330,7 +3336,14 @@ fieldset[disabled] .btn-link:focus {
   color: #777;
   text-decoration: none;
 }
-.btn-lg,
+.btn-lg {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.btn-lg:hover {
+  background-color: #000000;
+  color: #000000;
+}
 .btn-group-lg > .btn {
   padding: 10px 16px;
   font-size: 18px;
