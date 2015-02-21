@@ -16,7 +16,7 @@ html {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 0;
+        padding: 40px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -25,6 +25,86 @@ html {
     .top-nav-collapse {
         padding: 0;
     }
+}
+
+/* Whitney PRO */
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Light.otf') format('OpenType');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Book.otf') format('OpenType');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Medium.otf') format('OpenType');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Semibold.otf') format('OpenType');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Bold.otf') format('OpenType');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-Black.otf') format('OpenType');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-LightItalic.otf') format('OpenType');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-BookItalic.otf') format('OpenType');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-MediumItalic.otf') format('OpenType');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-SemiboldItalic.otf') format('OpenType');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-BoldItalic.otf') format('OpenType');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: WhitneyPro;
+  src: url('../assets/fonts/whitneypro/Whitney-BlackItalic.otf') format('OpenType');
+  font-weight: 800;
+  font-style: italic;
 }
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
@@ -58,3 +138,4 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #eee;
 }
+
