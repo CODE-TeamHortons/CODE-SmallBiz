@@ -37,19 +37,19 @@ class MatchController < ApplicationController
 				if(((regionPref == "Eastern Canada") && (query.Region == "Atlantic" || query.Region == "Quebec" || query.Region == "Ontario")) || (regionPref =="It doesn't matter") || ((regionPref == "Western Canada") &&  (query.Region == "Praries" || query.Region == "British Columbia")))
 					#some rating based off params
 					score = 0
-					score += ((100*query.FinAmount) / maxFinAmount* finAid.to_i) # some scaling constant? or add some constant?
+					score += ((85*query.FinAmount) / maxFinAmount* finAid.to_i) # some scaling constant? or add some constant?
 					#x1 = query.find(:select => ageTarget)
 					
-					score +=  ((100*query.send(ageTarget.to_sym)) / ageGroupMaxPct)*ageImportance.to_i
-					score += ((100*query.send(incomeTarget.to_sym)) / incomeMaxTarget)*incomeImportance.to_i
+					score +=  ((85*query.send(ageTarget.to_sym)) / ageGroupMaxPct)*ageImportance.to_i
+					score += ((85*query.send(incomeTarget.to_sym)) / incomeMaxTarget)*incomeImportance.to_i
 					if(retailType != "na")
 						retMax = Dataset.maximum(retailType)
-						score += ((100*query.send(retailType.to_sym)) / retMax)*params[:retailType].to_i
+						score += ((85*query.send(retailType.to_sym)) / retMax)*params[:retailType].to_i
 					end
 					
 					if(indusType != "na")
 						indMax = Dataset.maximum(indusType)
-						score += ((100*query.send(indusType.to_sym)) / indMax)*params[:indus].to_i
+						score += ((85*query.send(indusType.to_sym)) / indMax)*params[:indus].to_i
 					end
 					rankings[i] = score
 					
