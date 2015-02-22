@@ -49,15 +49,14 @@
 <!-- Resources Section -->
     <section id="results" class="results-section">
         <div class="container" style="font-weight: 200" align="middle">
-            <p><font size=10>Your <font color="e35d60">Results</font></font></p>
-            <font size=4>Our algorithm gives a score, or BizMap Index, for the top cities based off of your selected preferences. <br>Click on a province or city to learn more.</font><br><br>
+            <p><font size=10>Your <font color="e35d60">Results</font></font></p><br>
 
 
 <table border='3' style='width:100%'>
    <tr>
-    <td class="matchtable-head">Province</td>
-    <td class="matchtable-head">City</td>
-    <td class="matchtable-head">BMI (BizMap Index)</td>
+    <td class="matchtable">Province</td>
+    <td class="matchtable">City</td>
+    <td class="matchtable">BMI (BizMap Index)</td>
   </tr>
   <% idx = 0 %>
   <% rankings = Hash.new{|k,v| v} %>
@@ -71,8 +70,8 @@
 	  <%end%>
 
 			<tr>
-			  <td class="matchtable-prov" style="cursor:pointer" onclick="location.href='http://www.google.ca/search?btnI=I%27m+Feeling+Lucky&ie=UTF-8&oe=UTF-8&q=' + '<%= rprev %>' "><%= rprev %></td>
-			  <td class="matchtable-city" style="cursor:pointer" onclick="location.href='http://www.google.ca/search?btnI=I%27m+Feeling+Lucky&ie=UTF-8&oe=UTF-8&q=' + '<%= rprev + " " + row.City %>' "><%= row.City %></td>
+			  <td class="matchtable-light"><%= rprev %></td>
+			  <td class="matchtable-light" style="cursor:pointer" onclick="location.href='https://www.google.ca/?gws_rd=ssl#q=' + '<%= rprev + " " + row.City %>' "><%= row.City %></td>
 			  <td class="matchtable-score"><%= ((query[1]/10)+(5-idx)*0.7349657).round(1) %>%</td>
 			</tr>
 	 <% idx = idx + 1 %>
@@ -155,7 +154,6 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
 
         </div>
     </section>
-    <br><br>
     <div class="bottom_banner">
         <div style="height:250px;"></div>
     </div>
@@ -165,11 +163,13 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" align="center">
-                    <div style="height:80px;"></div>
+                    <div style="height:20px;"></div>
+                    <div style="font-weight: 100"><font color="e05c5e" size=30>What Do My Scores </font><font color="#FFFFFF" size=30>Mean?</font></h1></div>
+                    <div style="height:30px;"></div>
                     <div style="font-weight: 100"><font color="#FFFFFF" size=5>Got any questions or comments? Drop us a message!</font>
                         </br></br>
                         <p style="font-weight: 150px00"><font color="#FFFFFF">Team Hortons UBC</br>contact.teamhortons@gmail.com</font></p>
-                        </br></br>
+                        </br></br></br>
                         <img src="../assets/images/teamhortons.gif">
                     </div>
                 </div>
