@@ -67,7 +67,7 @@
     <tr>
       <td class="matchtable-light"><%= row.Province %></td>
       <td class="matchtable-light"><%= row.City %></td>
-      <td class="matchtable-score"><%= (query[1] + (8-idx)*10.3456789).round(1) %>%</td>
+      <td class="matchtable-score"><%= ((query[1]/10)+(5-idx)*0.7349657).round(1) %>%</td>
     </tr>
  <% idx = idx + 1 %>
  <%end%>
