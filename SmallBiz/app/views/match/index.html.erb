@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Resources</title>
+    <title>Find Your Match</title>
 
 
 
@@ -46,22 +46,22 @@
 <!-- Resources Section -->
     <section id="resources" class="resources-section">
         <div class="container" style="font-weight: 100">
-            <p><font size=10>Let's Find <font color="e35d60">Your City!!!!!!!!!!!!!</font></font></p>
+            <p><font size=10>Let's Find <font color="e35d60">Your City!</font></font></p><br>
 
 <%= form_for :match, url: match_path do |f| %>
-<div class="matchbg" style="font-weight: 100; font-size: 25px">
-    <p class="canadaform">
-        <%= f.label :region, ""%><br>
-        <%=radio_button_tag(:region, "Western Canada")%>
-        <%=label_tag(:region_1,"Western Canada") %>
-        <%=radio_button_tag(:region, "Eastern Canada")%>
-        <%=label_tag(:region_2,"Eastern Canada")%>
-        <%=radio_button_tag(:region, "It doesn't matter")%>
-        <%=label_tag(:region_3,"It doesn't matter")%>
+<div class="matchbg" style="font-weight: 200; font-size: 25px">
+    <p>
+        <font color="e35d60"><%= f.label :region, ""%></font><br>
+        <%=radio_button_tag(:region, "Western Canada")%><font size=4> Western Canada</font>
+        <%=label_tag(:region_1,"") %>
+        <%=radio_button_tag(:region, "Eastern Canada")%><font size=4> Eastern Canada</font>
+        <%=label_tag(:region_2,"")%>
+        <%=radio_button_tag(:region, "It doesn't matter")%><font size=4> It doesn't matter</font>
+        <%=label_tag(:region_3,"")%>
     </p>
     <p>
-        <%= f.label :finanass, "Financial Assistance" %><br>
-        How Important? <br>
+        <font color="e35d60"><%= f.label :finanass, "Financial Assistance" %></font><br>
+        <font size=4>To you, how important is the availability of financial aid?</font><br>
         <%= radio_button_tag(:finanass, "1") %>
         <%= label_tag(:finanass_1, "") %><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:finanass, "2") %>
@@ -71,9 +71,11 @@
     </p>
 
     <p>
-        <%= f.label :age, "Targeted Age Groups" %><br>
-        <%= f.select( :age, options_for_select([["0 to 24", "PctPerson024"], ["25 to 44", "PctPerson2544"], ["45 to 64", "PctPerson4564"], ["65 and older", "PctPerson65over"]])) %> <br>
-        How Important? <br>
+        <font color="e35d60"><%= f.label :age, "Targeted Age Groups" %></font><br>
+        <font size=4>
+        <%= f.select( :age, options_for_select([["0 to 24", "PctPerson024"], ["25 to 44", "PctPerson2544"], ["45 to 64", "PctPerson4564"], ["65 and older", "PctPerson65over"]])) %>
+        </font><br>
+        <font size=4>To you, how important is the targeted age group?</font><br>
         <%= radio_button_tag(:age, "1") %>
         <%= label_tag(:age_1, "") %><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:age, "2") %>
@@ -83,9 +85,11 @@
     </p>
 
     <p>
-        <%= f.label :income, "Targeted Income Groups" %><br>
-        <%= f.select( :income, options_for_select([["$15,000 and greater", "PctOver15K"], ["$50,000 and greater", "PctOver50K"], ["$100,000 and greater", "PctOver100K"]])) %> <br>
-        How Important? <br>
+        <font color="e35d60"><%= f.label :income, "Targeted Income Groups" %></font><br>
+        <font size=4>
+        <%= f.select( :income, options_for_select([["$15,000 and greater", "PctOver15K"], ["$50,000 and greater", "PctOver50K"], ["$100,000 and greater", "PctOver100K"]])) %>
+        </font><br>
+        <font size=4>To you, how important is the targeted income group?</font><br>
         <%= radio_button_tag(:income, "1") %>
         <%= label_tag(:income_1, "") %><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:income, "2") %>
@@ -94,9 +98,10 @@
         <%= label_tag(:income_3, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
     </p>
 
-    <div class="alert alert-warning" role="alert">Fill out only one of the following based on your type of business</div>
+    <div class="alert alert-info" role="alert"><font size=4>Fill out only <b>one</b> of the following based on your type of business:</font></div>
     <p>
-        <%= f.label :retailtype, "Sales Revenue in Area" %><br>
+        <font color="e35d60"><%= f.label :retailtype, "Retail-type" %></font><br>
+        <font size=4>
         <%= f.select( :retailtype, options_for_select([ ["Not Applicable", "na"],
                                                         ["Motor vehicle and parts dealers", "Motor"],
                                                         ["Furniture and home furnishings stores", "Furniture"],
@@ -109,17 +114,19 @@
                                                         ["Sporting goods, hobby, book and music stores", "Sports"],
                                                         ["General merchandise stores", "General"],
                                                         ["Miscellaneous store retailers", "Miscellaneous"]])) %> <br>
-        How Important? <br>
+        How accurate is this classification? (If applicable) <br>
         <%= radio_button_tag(:retailtype, "1") %>
         <%= label_tag(:retailtype_1, "") %><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:retailtype, "2") %>
         <%= label_tag(:retailtype_2, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:retailtype, "3") %>
         <%= label_tag(:retailtype_3, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
+        </font>
     </p>
 
     <p>
-        <%= f.label :indus, "Industry Growth" %><br>
+        <font color="e35d60"><%= f.label :indus, "Industry-type" %></font><br>
+        <font size=4>
         <%= f.select( :indus, options_for_select([      ["Not applicable", "na"],
                                                         ["Agriculture employment", "Agriculture"],
                                                         ["Forestry, fishing, mining, quarrying, oil and gas employment", "Forestry"],
@@ -137,18 +144,20 @@
                                                         ["Accommodation and food services employment", "Accomodation"],
                                                         ["Other services employment", "OtherServices"],
                                                         ["Public administration employment", "PublicAdmin"]])) %> <br>
-        How Important? <br>
+        How accurate is this classification? (If applicable) <br>
         <%= radio_button_tag(:indus, "1") %>
         <%= label_tag(:indus_1, "") %><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:indus, "2") %>
         <%= label_tag(:indus_2, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
         <%= radio_button_tag(:indus, "3") %>
         <%= label_tag(:indus_3, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
+        </font>
     </p>
-
+    <br>
     <p>
         <%= f.submit %>
     </p>
+    <br><br>
 
 <% end %>
         </div>
