@@ -320,7 +320,7 @@ table, th, td, tr {
     text-align: center;
 }
 
-.matchtable {
+.matchtable-head {
   padding: 20px;
   color: white;
   font-size: 20px;
@@ -336,7 +336,7 @@ table, th, td, tr {
   font-weight: 500;
 }
 
-.matchtable-light {
+.matchtable-prov {
   padding: 20px;
   color: white;
   background-color: #909090;
@@ -344,10 +344,34 @@ table, th, td, tr {
   font-weight: 300;
 }
 
-.matchtable-light:hover {
+.matchtable-city {
   padding: 20px;
   color: white;
+  background-color: #909090;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.matchtable-prov:hover {
+  padding: 20px;
+  color: #909090;
   background-color: #FFFFFF;
   font-size: 20px;
   font-weight: 300;
+}
+
+.matchtable-city:hover {
+  padding: 20px;
+  color: #909090;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.matchtable-score:hover {
+  padding: 10px;
+  color: #e35d60;
+  background-color: #FFFFFF;
+  font-size: 35px;
+  font-weight: 700;
 }
