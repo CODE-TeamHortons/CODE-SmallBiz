@@ -5,6 +5,13 @@
 
 
 <h1>Listing Queries</h1>
+
+ <tr>
+    <th>Region</th>
+    <th>Province</th>
+	<th>City</th>
+	<th>BizMap-Score</th>
+  </tr>
 <table>
   
   <% idx = 0 %>
@@ -17,15 +24,13 @@
       <td><%= row.Region %></td>
       <td><%= row.Province %></td>
 	  <td><%= row.City %></td>
-	  <td><%= query[1] %></td>
+	  <td><%= query[1] + (5-idx)*10 %></td>
     </tr>
  <% idx = idx + 1 %>
  <%end%>
   
 
 </table>
-
-
 <div style='width: 800px;'>
   <div id="multi_markers" style='width: 800px; height: 400px;'></div>
 </div>
