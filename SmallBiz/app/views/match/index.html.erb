@@ -73,7 +73,7 @@
     <p>
         <font color="e35d60"><%= f.label :age, "Targeted Age Groups" %></font><br>
         <font size=4>
-        <%= f.select( :age, options_for_select([["0 to 24", "PctPerson024"], ["25 to 44", "PctPerson2544"], ["45 to 64", "PctPerson4564"], ["65 and older", "PctPerson65over"]])) %>
+        <%= f.select( :age, options_for_select([["0 to 24", "PctPerson024"], ["25 to 44", "PctPerson2544"], ["45 to 64", "PctPerson4564"], ["65 and older", "PctPerson65Over"]])) %>
         </font><br>
         <font size=4>To you, how important is the targeted age group?</font><br>
         <%= radio_button_tag(:age, "1") %>
