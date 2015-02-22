@@ -68,9 +68,10 @@
 	  <% if rprev == "Saskatoon" %>
 	  <% rprev = "Saskatchewan" %>
 	  <%end%>
+
 			<tr>
 			  <td class="matchtable-light"><%= rprev %></td>
-			  <td class="matchtable-light" style="cursor:pointer" onclick="location.href='http://www.google.ca'"><%= row.City %></td>
+			  <td class="matchtable-light" style="cursor:pointer" onclick="location.href='https://www.google.ca/?gws_rd=ssl#q=' + '<%= rprev + " " + row.City %>' "><%= row.City %></td>
 			  <td class="matchtable-score"><%= ((query[1]/10)+(5-idx)*0.7349657).round(1) %>%</td>
 			</tr>
 	 <% idx = idx + 1 %>
