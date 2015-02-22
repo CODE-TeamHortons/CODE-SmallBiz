@@ -342,3 +342,12 @@ table, th, td, tr {
   background-color: #909090;
   font-size: 20px;
   font-weight: 300;
+}
+
+.matchtable-light:hover {
+  padding: 20px;
+  color: white;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
