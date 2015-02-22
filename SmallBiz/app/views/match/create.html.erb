@@ -6,7 +6,7 @@
   
   <% @matches.each do |query| %>
   <% key = query[0] %>
-  <% row = Dataset.find(key+93)%>
+  <% row = Dataset.find(key)%>
     <tr>
       <td><%= row.Region %></td>
       <td><%= row.Province %></td>
