@@ -33,7 +33,7 @@
     <section id="intro" class="intro-section" >
         <div class="header-shadow">
             <div class="row2">
-                <a class="navbar-brand page-scroll" href="#"><img src="../assets/images/logod2.gif"/></a>
+                <a class="navbar-brand page-scroll" href="../landingpage"><img src="../assets/images/logod2.gif"/></a>
             </div>
         </div>
     </section>
@@ -49,15 +49,14 @@
 <!-- Resources Section -->
     <section id="results" class="results-section">
         <div class="container" style="font-weight: 200" align="middle">
-            <p><font size=10<font color="e35d60">Results</font></font></p><br>
+            <p><font size=10>Your <font color="e35d60">Results</font></font></p><br>
 
 
-<table>
+<table border='3' style='width:100%'>
    <tr>
-    <th>Region</th>
-    <th>Province</th>
-    <th>City</th>
-    <th>BizMap-Score</th>
+    <td class="matchtable">Province</td>
+    <td class="matchtable">City</td>
+    <td class="matchtable">BMI (BizMap Index)</td>
   </tr>
   <% idx = 0 %>
   <% rankings = Hash.new{|k,v| v} %>
@@ -66,20 +65,20 @@
   <% row = Dataset.find(key)%>
   <% rankings[idx] = row.City + " " + row.Province %>
     <tr>
-      <td><%= row.Region %></td>
-      <td><%= row.Province %></td>
-      <td><%= row.City %></td>
-      <td><%= query[1] + (5-idx)*10 %></td>
+      <td class="matchtable-light"><%= row.Province %></td>
+      <td class="matchtable-light"><%= row.City %></td>
+      <td class="matchtable-score"><%= (query[1] + (8-idx)*10.3456789).round(1) %>%</td>
     </tr>
  <% idx = idx + 1 %>
  <%end%>
   
 
 </table>
-<div style='width: 800px;' align='center'>
-  <div id="multi_markers" style='width: 800px; height: 400px;'></div>
-</div>
+<br>
+<div id="multi_markers" style='width: 99%; height: 500px;'></div>
 
+
+<br><br><br>
 <%= javascript_tag do %>
 
 var handler = Gmaps.build('Google');
@@ -150,7 +149,28 @@ handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
 
         </div>
     </section>
+    <div class="bottom_banner">
+        <div style="height:250px;"></div>
+    </div>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" align="center">
+                    <div style="height:20px;"></div>
+                    <div style="font-weight: 100"><font color="e05c5e" size=30>What Do My Scores </font><font color="#FFFFFF" size=30>Mean?</font></h1></div>
+                    <div style="height:30px;"></div>
+                    <div style="font-weight: 100"><font color="#FFFFFF" size=5>Got any questions or comments? Drop us a message!</font>
+                        </br></br>
+                        <p style="font-weight: 150px00"><font color="#FFFFFF">Team Hortons UBC</br>contact.teamhortons@gmail.com</font></p>
+                        </br></br></br>
+                        <img src="../assets/images/teamhortons.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow88.js"></script>
