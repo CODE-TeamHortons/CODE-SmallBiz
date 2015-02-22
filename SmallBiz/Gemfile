@@ -48,6 +48,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #1.8.0 for compatability with windows
 gem 'coffee-script-source', '1.8.0'
 
+#Google Maps 4 Railz
+gem 'geocoder'
+gem 'gmaps4rails'
+
 
 group :development do
   gem 'capistrano-rails'

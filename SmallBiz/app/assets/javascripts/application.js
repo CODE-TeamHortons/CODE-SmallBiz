@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap
 //= require bootstrap.min
 //= require jquery.easing.min
 //= require scrolling-nav
-//= require turbolinks
+//= require underscore
+//= require gmaps/google
 //= require_tree .
