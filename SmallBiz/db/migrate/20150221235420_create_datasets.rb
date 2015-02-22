@@ -9,7 +9,7 @@ class CreateDatasets < ActiveRecord::Migration
 	  t.integer :PctPerson024
 	  t.integer :PctPerson2544
 	  t.integer :PctPerson4564
-	  t.integer :PctPerson65over
+	  t.integer :PctPerson65Over
 	  t.integer :PctOver15K
 	  t.integer :PctOver50K
 	  t.integer :PctOver100K
@@ -33,7 +33,7 @@ class CreateDatasets < ActiveRecord::Migration
 	  t.integer :Trade
 	  t.integer :TransporationWarehousing
 	  t.integer :FinanceInsuranceRealEstate
-	  t.integer :ProfScientifictTechnical
+	  t.integer :ProfScientificTechnical
 	  t.integer :BusinessBuildingSupportService
 	  t.integer :Education
 	  t.integer :HealthCare
