@@ -14,7 +14,7 @@
 
 	<p>
 		<%= f.label :age, "Targeted Age Groups" %><br>
-		<%= f.select( :age, options_for_select([["0 to 24", "0-24"], ["25 to 44", "25-64"], ["45 to 64", "45-64"], ["65 and older", "65+"]])) %> <br>
+		<%= f.select( :age, options_for_select([["0 to 24", "PctPerson024"], ["25 to 44", "PctPerson2544"], ["45 to 64", "PctPerson4564"], ["65 and older", "pctperson65over"]])) %> <br>
 		How Important? <br>
 		<%= radio_button_tag(:age, "1") %>
 		<%= label_tag(:age_1, "1") %>
@@ -26,7 +26,7 @@
 
 	<p>
 		<%= f.label :income, "Targeted Income Groups" %><br>
-		<%= f.select( :income, options_for_select([["$15,000 and greater", "15k+"], ["$50,000 and greater", "50k+"], ["$100,000 and greater", "100k+"]])) %> <br>
+		<%= f.select( :income, options_for_select([["$15,000 and greater", "pctover15k"], ["$50,000 and greater", "pctover50k"], ["$100,000 and greater", "pctover100k"]])) %> <br>
 		How Important? <br>
 		<%= radio_button_tag(:income, "1") %>
 		<%= label_tag(:income_1, "1") %>
@@ -37,26 +37,22 @@
 	</p>
 
 	<p>
-		<%= f.label :retailbool, "Retail?" %><br>
-		<%= radio_button_tag(:retailbool, "Yes") %>
-		<%= label_tag(:retailbool_y, "Yes") %>
-		<%= radio_button_tag(:retailbool, "No") %>
-		<%= label_tag(:retailbool_n, "No") %>
+		<h2>Pick one of the two</h2>
 	</p>
 
 	<p>
 		<%= f.label :retailtype, "Retail Type" %><br>
-		<%= f.select( :retailtype, options_for_select([["Motor vehicle and parts dealers", "Motor"],
-														["Furniture and home furnishings stores", "Furniture"],
-														["Electronics and appliance stores", "Electronics"],
-														["Building material and garden equipment and supplies dealers", "Building"],
-														["Food and beverage stores", "Food"],
-														["Health and personal care stores", "Health"],
-														["Gasoline stations", "Gasoline"],
-														["Clothing and clothing accessories stores", "Clothing"],
-														["Sporting goods, hobby, book and music stores", "Sporting"],
-														["General merchandise stores", "General"],
-														["Miscellaneous store retailers", "Miscellaneous"]])) %> <br>
+		<%= f.select( :retailtype, options_for_select([["Motor vehicle and parts dealers", "motor"],
+														["Furniture and home furnishings stores", "furniture"],
+														["Electronics and appliance stores", "electronic"],
+														["Building material and garden equipment and supplies dealers", "buildinggardenmaterial"],
+														["Food and beverage stores", "fooddrink"],
+														["Health and personal care stores", "healthpersonal"],
+														["Gasoline stations", "gas"],
+														["Clothing and clothing accessories stores", "clothing"],
+														["Sporting goods, hobby, book and music stores", "sports"],
+														["General merchandise stores", "general"],
+														["Miscellaneous store retailers", "miscellaneous"]])) %> <br>
 		How Important? <br>
 		<%= radio_button_tag(:retailtype, "1") %>
 		<%= label_tag(:retailtype_1, "1") %>
@@ -68,22 +64,22 @@
 
 	<p>
 		<%= f.label :indus, "Industry" %><br>
-		<%= f.select( :indus, options_for_select([["Agriculture employment", "Motor"],
-														["Forestry, fishing, mining, quarrying, oil and gas employment", "Furniture"],
-														["Utilities employment", "Electronics"],
-														["Construction employment", "Building"],
-														["Manufacturing employment", "Food"],
-														["Trade employment", "Health"],
-														["Transportation and warehousing employment", "Gasoline"],
-														["Finance, insurance, real estate and leasing employment", "Clothing"],
-														["Professional, scientific and technical services employment", "Sporting"],
-														["Business, building and other support services employment", "General"],
-														["Educational services employment", "Health"],
-														["Health care and social assistance employment", "Gasoline"],
-														["Information, culture and recreation employment", "Clothing"],
-														["Accommodation and food services employment", "Sporting"],
-														["Other services employment", "General"],
-														["Public administration employment", "Miscellaneous"]])) %> <br>
+		<%= f.select( :indus, options_for_select([["Agriculture employment", "agriculture"],
+														["Forestry, fishing, mining, quarrying, oil and gas employment", "forestry"],
+														["Utilities employment", "utilities"],
+														["Construction employment", "construction"],
+														["Manufacturing employment", "manufacturing"],
+														["Trade employment", "trade"],
+														["Transportation and warehousing employment", "transporationwarehousing"],
+														["Finance, insurance, real estate and leasing employment", "financeinsurancerealestate"],
+														["Professional, scientific and technical services employment", "profscientifictechnical"],
+														["Business, building and other support services employment", "businessbuildingsupportservice"],
+														["Educational services employment", "education"],
+														["Health care and social assistance employment", "healthcare"],
+														["Information, culture and recreation employment", "informationculturerecreation"],
+														["Accommodation and food services employment", "accomodation"],
+														["Other services employment", "otherservices"],
+														["Public administration employment", "publicadmin"]])) %> <br>
 		How Important? <br>
 		<%= radio_button_tag(:indus, "1") %>
 		<%= label_tag(:indus_1, "1") %>

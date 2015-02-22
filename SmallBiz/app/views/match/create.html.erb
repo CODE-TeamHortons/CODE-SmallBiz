@@ -1,0 +1,18 @@
+<h1>hi</h1>
+
+
+<h1>Listing Queries</h1>
+<table>
+  
+  <% @matches.each do |query| %>
+  <% key = query[0] %>
+  <% row = Dataset.find(key+93)%>
+    <tr>
+      <td><%= row.Region %></td>
+      <td><%= row.Province %></td>
+	  <td><%= row.City %></td>
+    </tr>
+ <%end%>
+  
+
+</table>

@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get 'landingpage/index'
 
   get 'resources/index'
-
+  
+  resources :match
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
