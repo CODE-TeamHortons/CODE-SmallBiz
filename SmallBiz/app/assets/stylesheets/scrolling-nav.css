@@ -233,17 +233,17 @@ of those sections to manage the look and feel of the site. */
 }
 
 .services-section {
-    height: 100%;
+    height: 1000px;
     padding-top: 0px;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
-    height: 100%;
-    padding-top: 150px;
+    height: 400px;
+    padding-top: 0px;
     text-align: center;
-    background: #fff;
+    background: #6c6d6a;
 }
 
 .header-shadow {
@@ -263,6 +263,12 @@ of those sections to manage the look and feel of the site. */
     background-image: url('../assets/images/middle_banner.gif');
     width:100%;
     height:150px;
+}
+
+.bottom_banner {
+    background-image: url('../assets/images/bottom_banner.gif');
+    width:100%;
+    height:250px;
 }
 
 .btn-custom {
