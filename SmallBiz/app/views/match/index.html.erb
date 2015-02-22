@@ -99,7 +99,7 @@
         <%= label_tag(:income_3, "") %><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif"><img src="../assets/images/mapleleaf.gif">
     </p>
 
-    <div class="alert alert-info" role="alert"><font size=4>Fill out only <b>one</b> of the following based on your type of business:</font></div>
+    <div class="alert alert-info" role="alert"><font size=4>If your business involves sales of goods, choose the most applicable retail category below. Otherwise, choose the most applicable non-retail/industry category below.</font></div>
     <p>
         <font color="e35d60"><%= f.label :retailtype, "Retail-type" %></font><br>
         <font size=4>
@@ -126,7 +126,7 @@
     </p>
 
     <p>
-        <font color="e35d60"><%= f.label :indus, "Industry-type" %></font><br>
+        <font color="e35d60"><%= f.label :indus, "Non-Retail Industry-type" %></font><br>
         <font size=4>
         <%= f.select( :indus, options_for_select([      ["Not applicable", "na"],
                                                         ["Agriculture employment", "Agriculture"],
