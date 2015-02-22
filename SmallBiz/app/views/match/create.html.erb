@@ -64,12 +64,16 @@
   <% key = query[0] %>
   <% row = Dataset.find(key)%>
   <% rankings[idx] = row.City + " " + row.Province %>
-    <tr>
-      <td class="matchtable-light"><%= row.Province %></td>
-      <td class="matchtable-light"><%= row.City %></td>
-      <td class="matchtable-score"><%= ((query[1]/10)+(5-idx)*0.7349657).round(1) %>%</td>
-    </tr>
- <% idx = idx + 1 %>
+	  <% rprev = row.Province %>
+	  <% if rprev == "Saskatoon" %>
+	  <% rprev = "Saskatchewan" %>
+	  <%end%>
+			<tr>
+			  <td class="matchtable-light"><%= rprev %></td>
+			  <td class="matchtable-light"><%= row.City %></td>
+			  <td class="matchtable-score"><%= ((query[1]/10)+(5-idx)*0.7349657).round(1) %>%</td>
+			</tr>
+	 <% idx = idx + 1 %>
  <%end%>
   
 
